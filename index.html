@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Loan Calculator</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Loan Calculator</h1>
+    <p>Choose one:</p>
+    <button id="clientButton">Client</button>
+    <button id="lenderButton">Lender</button>
+
+    <div id="clientCalculator" style="display: none;">
+      <!-- Client Loan Calculator Section -->
+      <h2>Client Loan Calculator</h2>
+      <form id="loanForm">
+        <label for="loanAmount">Loan Amount:</label>
+        <input type="number" id="loanAmount" placeholder="Enter loan amount" required>
+
+        <label for="interestRate">Interest Rate:</label>
+        <input type="number" id="interestRate" step="0.01" placeholder="Enter interest rate" required>
+
+        <label for="monthsToPay">Months to Pay:</label>
+        <input type="number" id="monthsToPay" placeholder="Enter months to pay" required>
+
+        <label for="monthlyPay">Monthly Pay:</label>
+        <input type="number" id="monthlyPay" placeholder="Enter monthly pay" required>
+
+        <button type="submit">Calculate</button>
+      </form>
+    </div>
+
+    <div id="lenderForm" style="display: none;">
+      <!-- Lender Loan Application Section -->
+      <h2>Lender Loan Application</h2>
+      <form id="lenderApplication">
+        <label for="clientName">Client Name:</label>
+        <input type="text" id="clientName" placeholder="Enter client name" required>
+
+        <label for="clientId">ID/Passport No.:</label>
+        <input type="text" id="clientId" placeholder="Enter ID/Passport No." required>
+
+        <label for="amountRequired">Amount Required:</label>
+        <input type="number" id="amountRequired" placeholder="Enter amount required" required>
+
+        <button type="button" id="checkCreditScore">Click to check credit score!</button>
+      </form>
+    </div>
+
+    <!-- Lender Login Page -->
+    <div id="lenderLoginPage" style="display: none;">
+      <h2>Lender Login</h2>
+      <form id="lenderLoginForm">
+        <label for="lenderName">Name:</label>
+        <input type="text" id="lenderName" placeholder="Enter your name" required>
+
+        <label for="lenderPassword">Password:</label>
+        <input type="password" id="lenderPassword" placeholder="Enter your password" required>
+
+        <button type="button" id="lenderLoginBtn">Login</button>
+      </form>
+    </div>
+
+    <!-- Home Button -->
+    <button id="homeButton" style="display: none;">Home</button>
+  </div>
+
+  <!-- Fixed footer -->
+  <footer>
+    <div class="social-icons">
+      <!-- Add social media icons here -->
+      <a href="#" class="social-icon"><i class="fa fa-facebook"></i></a>
+      <a href="#" class="social-icon"><i class="fa fa-instagram"></i></a>
+      <a href="#" class="social-icon"><i class="fa fa-twitter"></i></a>
+      <a href="#" class="social-icon"><i class="fa fa-linkedin"></i></a>
+    </div>
+    <p>XXXX Bank &copy; 2023. All rights reserved.</p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
+
