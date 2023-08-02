@@ -62,9 +62,21 @@ document.getElementById('clientPage').addEventListener('input', updateMonthsToPa
 document.getElementById('lenderPage').addEventListener('input', updateMonthsToPay);
 document.getElementById('clientPage').addEventListener('click', showClientPage);
 document.getElementById('lenderPage').addEventListener('click', showLenderPage);
-document.getElementById('homeBtn').addEventListener('click', showHomePage);
 document.getElementById('nextBtn').addEventListener('click', showLenderPage);
 document.getElementById('scoreCardBtn').addEventListener('click', checkScoreCard);
+
+// Query all elements with the class 'home-Btn'
+const homeButtons = document.querySelectorAll('.home-Btn');
+
+// Loop through the collection and attach event listener
+homeButtons.forEach(button => {
+    button.addEventListener('click', goToHomePage);
+});
+
+function goToHomePage() {
+    hideAllPages();
+    document.getElementById('homePage').style.display = 'block';
+}
 
 
 
