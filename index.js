@@ -24,10 +24,13 @@ function checkScoreCard() {
     const fixedInterestRate = 12;
 
     if (clientCreditScore < 400) {
-        document.getElementById('scoreCardResult').innerHTML = 'Sorry, client credit score is too low. No loans.';
+        //document.getElementById('scoreCardResult').innerHTML = 
+        prompt('Sorry, client credit score is too low. No loans.');
     } else {
-        document.getElementById('scoreCardResult').innerHTML = 'Congratulations! You can apply for a loan!';
+        //document.getElementById('scoreCardResult').innerHTML = 
+        prompt('Congratulations! You can apply for a loan!');
     }
+    
 
     document.getElementById('interestRate').value = fixedInterestRate;
     updateMonthsToPay();
@@ -59,12 +62,18 @@ document.getElementById('clientPage').addEventListener('input', updateMonthsToPa
 document.getElementById('lenderPage').addEventListener('input', updateMonthsToPay);
 document.getElementById('clientPage').addEventListener('click', showClientPage);
 document.getElementById('lenderPage').addEventListener('click', showLenderPage);
+document.getElementById('homeBtn').addEventListener('click', showHomePage);
+document.getElementById('nextBtn').addEventListener('click', showLenderPage);
+document.getElementById('scoreCardBtn').addEventListener('click', checkScoreCard);
+
+
 
 // Prevent propagation of click event on lender input fields
 document.querySelectorAll('#lenderPage input').forEach(input => {
     input.addEventListener('click', function(event) {
         event.stopPropagation();
     });
+
 });
 
 // Initialize the home page
