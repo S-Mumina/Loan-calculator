@@ -43,7 +43,7 @@ body {
     gap: 50px;
 }
 
-.back-btn,
+.home-btn,
 .login-btn,.check-score-btn {
     background-color: blue;
     color: white;
@@ -134,8 +134,8 @@ footer {
 
 .social-icons a {
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 100px;
+    height: auto;
     line-height: 30px;
     text-align: center;
     font-size: 20px;
