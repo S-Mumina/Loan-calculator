@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loan Calculator</title>
     <link rel="stylesheet" href="./style.css">
-    <!-- Include Font Awesome CSS -->
+    <!--  Font Awesome  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -14,7 +14,7 @@
     <div class="container">
         <!-- Home Page -->
         <div class="page" id="homePage">
-            <h1>Welcome to Loan Calculator</h1>
+            <h1>XBank Loan Calculator.</h1>
             <p>Choose one:</p>
             <div class="buttons">
                 <button class="client-btn" onclick="showClientPage()">Client</button>
@@ -24,7 +24,7 @@
 
         <!-- Client Page -->
         <div class="page" id="clientPage" style="display: none;">
-            <h1>Client Page</h1>
+            <h1>Client Page.</h1>
             <div class="input-container">
                 <label for="loanAmount">Loan Amount:</label>
                 <input type="number" id="loanAmount" oninput="updateMonthsToPay()">
@@ -41,13 +41,13 @@
                 <label for="monthsToPay">Months to Pay:</label>
                 <input type="number" id="monthsToPay" readonly>
             </div>
-            <button class="back-btn" onclick="goToHomePage()"><< Back to Home</button>
-            <button class="next-btn" onclick="showLenderPage()">Next >></button>
+            <button class="back-btn" onclick="goToHomePage()"> Home</button>
+           
         </div>
 
         <!-- Lender Login Page -->
         <div class="page" id="lenderLoginPage" style="display: none;">
-            <h1>Lender Login</h1>
+            <h1>Lender Login:</h1>
             <div class="input-container">
                 <label for="lenderName">Lender Name:</label>
                 <input type="text" id="lenderName">
@@ -56,13 +56,13 @@
                 <label for="lenderPassword">Password:</label>
                 <input type="password" id="lenderPassword">
             </div>
-            <button class="back-btn" onclick="goToHomePage()"><< Back to Home</button>
-            <button class="login-btn" onclick="showLenderPage()">Login >></button>
+            <button class="back-btn" onclick="goToHomePage()"> Home</button>
+            <button class="login-btn" onclick="showLenderPage()">Login </button>
         </div>
 
         <!-- Lender Page -->
         <div class="page" id="lenderPage" style="display: none;">
-            <h1>Lender Page</h1>
+            <h1>Lender Page.</h1>
             <div class="input-container">
                 <label for="clientName">Client Name:</label>
                 <input type="text" id="clientName">
@@ -75,7 +75,7 @@
                 <label for="loanAmountLender">Loan Amount:</label>
                 <input type="number" id="loanAmountLender">
             </div>
-            <button class="back-btn" onclick="goToHomePage()">Back to Home</button>
+            <button class="back-btn" onclick="goToHomePage()">Home</button>
             <button class="check-score-btn" onclick="checkScoreCard()">Check Score Card >></button>
         </div>
 
@@ -88,7 +88,7 @@
     </div>
 
     <footer>
-        <p>Welcome to our bank. All rights reserved @2023</p>
+      
         <p>Follow us on:</p>
         <!-- Social media icons using Font Awesome -->
         <ul class="social-icons">
@@ -96,7 +96,9 @@
             <li><a href="#" class="fab fa-instagram" target="_blank"></a></li>
             <li><a href="#" class="fab fa-twitter" target="_blank"></a></li>
             <li><a href="#" class="fab fa-linkedin" target="_blank"></a></li>
-        </ul>
+        </ul>  
+        <p>XBank.All rights reserved &copy;2023</p>
+
     </footer>
 
     <script src="./index.js"></script>

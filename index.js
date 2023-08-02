@@ -20,8 +20,8 @@ function showLenderPage() {
 }
 
 function checkScoreCard() {
-    const clientCreditScore = 500; // Replace with actual client's credit score (you can capture this input from the lender)
-    const fixedInterestRate = 12; // Fixed interest rate of 12%
+    const clientCreditScore = 500;
+    const fixedInterestRate = 12;
 
     if (clientCreditScore < 400) {
         document.getElementById('scoreCardResult').innerHTML = 'Sorry, client credit score is too low. No loans.';
