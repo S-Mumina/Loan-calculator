@@ -34,8 +34,22 @@ body {
 
 .buttons {
     display: flex;
-    gap: 10px;
+    gap: 50px;
 }
+
+.back-btn,
+.login-btn,.check-score-btn {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+    justify-content: space-between;
+}
+
+
 
 .client-btn, .lender-btn {
     padding: 10px 20px;
