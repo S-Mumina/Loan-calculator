@@ -21,6 +21,7 @@ function showLenderPage() {
 
 function checkScoreCard() {
     const clientCreditScore = 500;
+    let interestRate = 0;
    
 
     if (clientCreditScore < 400) {
@@ -44,13 +45,16 @@ function hideAllPages() {
     });
 }
 
+
 function updateMonthsToPay() {
     const loanAmount = parseFloat(document.getElementById('loanAmount').value);
     const interestRate = parseFloat(document.getElementById('interestRate').value);
     const monthlyPayment = parseFloat(document.getElementById('monthlyPayment').value);
 
-    if (loanAmount > 0 && interestRate > 0 && monthlyPayment > 0) {
-        const monthsToPay = Math.ceil(loanAmount / monthlyPayment);
+    if (loanAmount > 0 && interestRate >= 0 && monthlyPayment > 0) {
+        const monthlyInterestRate = interestRate / 100 / 12;
+        const monthsToPay = Math.ceil(Math.log(1 + loanAmount * monthlyInterestRate / monthlyPayment) / Math.log(1 + monthlyInterestRate));
+        
         document.getElementById('monthsToPay').value = monthsToPay;
     }
 }
@@ -77,11 +81,6 @@ const addListenersToPage = (page, clickHandler) => {
 addListenersToPage(clientPage, showClientPage);
 addListenersToPage(lenderPage, showLenderPage);
 
-
-/*function goToHomePage() {
-    hideAllPages();
-    document.getElementById('homePage').style.display = 'block';
-}*/
 
 // Prevent propagation of click event on lender input fields
 document.querySelectorAll('#lenderPage input').forEach(input => {
