@@ -58,6 +58,10 @@ function updateMonthsToPay() {
 const clientPage = document.getElementById('clientPage');
 const lenderPage = document.getElementById('lenderPage');
 
+function goToHomePage() {
+    hideAllPages();
+    document.getElementById('homePage').style.display = 'block';
+}
 const homeButtons = document.querySelectorAll('.home-btn');
 const addListenersToPage = (page, clickHandler) => {
     page.addEventListener('input', updateMonthsToPay);
@@ -74,10 +78,10 @@ addListenersToPage(clientPage, showClientPage);
 addListenersToPage(lenderPage, showLenderPage);
 
 
-function goToHomePage() {
+/*function goToHomePage() {
     hideAllPages();
     document.getElementById('homePage').style.display = 'block';
-}
+}*/
 
 // Prevent propagation of click event on lender input fields
 document.querySelectorAll('#lenderPage input').forEach(input => {
