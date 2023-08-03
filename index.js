@@ -21,10 +21,10 @@ function showLenderPage() {
 
 function checkScoreCard() {
     const clientCreditScore = 500;
-    const fixedInterestRate = 12;
+   
 
     if (clientCreditScore < 400) {
-        prompt('Sorry, client credit score is too low. No loans.');
+       prompt('Sorry, client credit score is too low. No loans.');
     } else {
         prompt('Congratulations! You can apply for a loan!');
     }
@@ -55,14 +55,19 @@ function updateMonthsToPay() {
     }
 }
 
-
-
 const clientPage = document.getElementById('clientPage');
 const lenderPage = document.getElementById('lenderPage');
 
+const homeButtons = document.querySelectorAll('.home-btn');
 const addListenersToPage = (page, clickHandler) => {
     page.addEventListener('input', updateMonthsToPay);
-    page.addEventListener('click', clickHandler);
+    page.addEventListener('click', function(event) {
+        if (event.target.classList.contains('home-btn')) {
+            goToHomePage();
+        } else {
+            clickHandler();
+        }
+    });
 };
 
 addListenersToPage(clientPage, showClientPage);
@@ -73,12 +78,6 @@ function goToHomePage() {
     hideAllPages();
     document.getElementById('homePage').style.display = 'block';
 }
-
-const homeButtons = document.querySelectorAll('.home-btn');
-homeButtons.forEach(button => {
-    button.addEventListener('click', goToHomePage);
-});
-
 
 // Prevent propagation of click event on lender input fields
 document.querySelectorAll('#lenderPage input').forEach(input => {
