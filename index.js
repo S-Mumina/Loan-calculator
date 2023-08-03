@@ -24,10 +24,8 @@ function checkScoreCard() {
     const fixedInterestRate = 12;
 
     if (clientCreditScore < 400) {
-        //document.getElementById('scoreCardResult').innerHTML = 
         prompt('Sorry, client credit score is too low. No loans.');
     } else {
-        //document.getElementById('scoreCardResult').innerHTML = 
         prompt('Congratulations! You can apply for a loan!');
     }
     
@@ -57,27 +55,29 @@ function updateMonthsToPay() {
     }
 }
 
-// Add event listeners for the buttons
-document.getElementById('clientPage').addEventListener('input', updateMonthsToPay);
-document.getElementById('lenderPage').addEventListener('input', updateMonthsToPay);
-document.getElementById('clientPage').addEventListener('click', showClientPage);
-document.getElementById('lenderPage').addEventListener('click', showLenderPage);
-document.getElementById('nextBtn').addEventListener('click', showLenderPage);
-document.getElementById('scoreCardBtn').addEventListener('click', checkScoreCard);
 
-// Query all elements with the class 'home-Btn'
-const homeButtons = document.querySelectorAll('.home-Btn');
 
-// Loop through the collection and attach event listener
-homeButtons.forEach(button => {
-    button.addEventListener('click', goToHomePage);
-});
+const clientPage = document.getElementById('clientPage');
+const lenderPage = document.getElementById('lenderPage');
+
+const addListenersToPage = (page, clickHandler) => {
+    page.addEventListener('input', updateMonthsToPay);
+    page.addEventListener('click', clickHandler);
+};
+
+addListenersToPage(clientPage, showClientPage);
+addListenersToPage(lenderPage, showLenderPage);
+
 
 function goToHomePage() {
     hideAllPages();
     document.getElementById('homePage').style.display = 'block';
 }
 
+const homeButtons = document.querySelectorAll('.home-btn');
+homeButtons.forEach(button => {
+    button.addEventListener('click', goToHomePage);
+});
 
 
 // Prevent propagation of click event on lender input fields
