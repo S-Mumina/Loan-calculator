@@ -2,12 +2,13 @@ body, h1, h2, h3, p, ul, li, input, button {
     margin: 0;
     padding: 0;
     list-style: none;
+
 }
 
 body {
     font-family: Arial, sans-serif; 
-    background-image: url('./images/image2.jpg');
-    background-size: cover;
+    /*background-image: url('./images/image2.jpg');*/
+    background-image: url("https://media.istockphoto.com/id/1217551672/photo/hotel-or-office-building-lobby-blur-background-interior-view-toward-reception-hall-modern.jpg?b=1&s=612x612&w=0&k=20&c=54cqk-b2cLjJgXG_4h2LYXWH_m0Vp-fCIrtzey47iSA=");
     background-position: center;
     background-repeat: no-repeat;
     opacity:2;
