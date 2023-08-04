@@ -6,7 +6,7 @@ body, h1, h2, h3, p, ul, li, input, button {
 
 body {
     font-family: Arial, sans-serif; 
-    background-image: url('./image2.jpg');
+    background-image: url('./images/image2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
