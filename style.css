@@ -9,6 +9,7 @@ body {
     font-family: Arial, sans-serif; 
     /*background-image: url('./images/image2.jpg');*/
     background-image: url("https://media.istockphoto.com/id/1217551672/photo/hotel-or-office-building-lobby-blur-background-interior-view-toward-reception-hall-modern.jpg?b=1&s=612x612&w=0&k=20&c=54cqk-b2cLjJgXG_4h2LYXWH_m0Vp-fCIrtzey47iSA=");
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     opacity:2;
@@ -140,7 +141,7 @@ footer {
     line-height: 30px;
     text-align: center;
     font-size: 20px;
-    color: #333;
+    color:blue;
     background-color: #f1f1f1;
     border-radius: 50%;
     transition: color 0.3s, background-color 0.3s;
@@ -148,5 +149,5 @@ footer {
 
 .social-icons a:hover {
     color: #fff;
-    background-color: #007bff;
+    background-color: lightblue;
 }
